@@ -33,5 +33,17 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+        //implementar un metodo publico que retorne un string con el detalle de la oferta
+        public string AsText()
+        {
+            StringBuilder stringoferta = new StringBuilder();
+            stringoferta.AppendLine($"Oferta válida hasta {this.EndDate.ToShortDateString()}");
+            stringoferta.AppendLine("Items:");
+            foreach (OfferItem item in this.items)
+            {
+                stringoferta.AppendLine(item.AsText());
+            }
+            return stringoferta.ToString();
+        }
     }
 }

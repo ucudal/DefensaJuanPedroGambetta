@@ -17,5 +17,15 @@ namespace Ucu.Poo.Defense
             this.Quantity = quantity;
             this.Price = price;
         }
+        public string AsText()
+        {
+            StringBuilder stringoferta = new StringBuilder();
+            stringoferta.Append(this.Residue.Name);
+            stringoferta.Append(" ");
+            stringoferta.Append(this.Quantity);
+            stringoferta.Append(" ");
+            stringoferta.Append(this.Price);
+            return stringoferta.ToString();
+        }
     }
 }
