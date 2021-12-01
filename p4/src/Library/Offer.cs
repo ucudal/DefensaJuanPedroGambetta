@@ -38,13 +38,12 @@ namespace Ucu.Poo.Defense
             this.EndDate = endDate;
         }
 
-        public OfferItem AddItem(Residue Residue, int quantity, int price)
+        public OfferItem AddItem(IOfferItem item, int quantity, int price)
         {
-            OfferItem item = new OfferItem(Residue, quantity, price);
-            this.items.Add(item);
-            return item;
+            OfferItem offerItem = new OfferItem(item, quantity, price);
+            this.items.Add(offerItem);
+            return offerItem;
         }
-
         public void RemoveItem(OfferItem item)
         {
             this.items.Remove(item);
