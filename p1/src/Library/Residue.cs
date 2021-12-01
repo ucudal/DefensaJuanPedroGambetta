@@ -11,5 +11,16 @@ namespace Ucu.Poo.Defense
             this.Name = name;
             this.Type = type;
         }
+        public bool IsOrganic(ResidueType residue)
+        {
+            if (residue.IsOrganic)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
